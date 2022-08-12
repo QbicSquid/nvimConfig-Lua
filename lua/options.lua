@@ -4,9 +4,10 @@ vim.o.cursorline = true
 -- Folds
 vim.o.foldmethod = 'indent'
 vim.o.foldlevel = 99
+vim.o.foldtext = ''
 
 -- General
-vim.o.fillchars = 'eob: '
+vim.o.fillchars = 'eob: ,fold: '
 vim.o.wrap = false
 vim.o.updatetime = 750
 

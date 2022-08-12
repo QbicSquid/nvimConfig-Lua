@@ -13,4 +13,7 @@ vim.cmd[[colorscheme gruvbox]]
 -- Cursor
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', { bg='NONE' })
-vim.api.nvim_set_hl(0, 'CursorLineNR', { bg='NONE', fg='ORANGE' })
+vim.api.nvim_set_hl(0, 'CursorLineNR', { bg='NONE', fg='#fabd2f' })
+vim.api.nvim_set_hl(0, 'Folded', { bg='NONE', fg='#fabd2f' })
+vim.api.nvim_set_hl(0, 'WinSeparator', { bg='#504945', fg='#504945' })
+
