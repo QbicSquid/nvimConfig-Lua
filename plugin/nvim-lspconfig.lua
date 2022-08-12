@@ -1,10 +1,26 @@
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
+vim.keymap.set('n', '<space>d', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+
+-- Diagnostic config
+vim.o.signcolumn = 'yes:1'
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+})
+
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
