@@ -9,4 +9,6 @@ return require('packer').startup(function()
         use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
         use 'aadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
         use 'hrsh7th/cmp-nvim-lsp-signature-help' -- Signature source for nvim-cmp
+
+    use 'lewis6991/gitsigns.nvim' -- git decorations
 end)
