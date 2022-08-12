@@ -9,3 +9,8 @@ vim.api.nvim_set_var('gruvbox_contrast_dark', 'medium')
 vim.api.nvim_set_var('gruvbox_sign_column', 'bg0')
 
 vim.cmd[[colorscheme gruvbox]]
+
+-- Cursor
+vim.o.cursorline = true
+vim.api.nvim_set_hl(0, 'CursorLine', { bg='NONE' })
+vim.api.nvim_set_hl(0, 'CursorLineNR', { bg='NONE', fg='ORANGE' })
