@@ -7,10 +7,14 @@ return require('packer').startup(function()
     -- LSP & Related Features
     use 'neovim/nvim-lspconfig' -- config for LSP
     use 'L3MON4D3/LuaSnip' -- Snippet plugin
-    use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-    use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-    use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-    use 'hrsh7th/cmp-nvim-lsp-signature-help' -- Signature source for nvim-cmp
+    use {
+        'hrsh7th/nvim-cmp', -- Autocompletion plugin
+        requires = {
+            'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
+            'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
+            'hrsh7th/cmp-nvim-lsp-signature-help', -- Signature source for nvim-cmp
+        },
+    }
 
     -- Others    
     use 'kyazdani42/nvim-tree.lua' -- File tree navigator
@@ -19,4 +23,5 @@ return require('packer').startup(function()
         'nvim-treesitter/nvim-treesitter', -- Better Syntax Highlighting
         run = ':TSUpdate'
     }
+    use 'glepnir/dashboard-nvim' -- Display when starting neovim
 end)

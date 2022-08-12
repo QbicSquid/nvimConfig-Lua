@@ -14,5 +14,7 @@ vim.cmd[[colorscheme gruvbox]]
 vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', { bg='NONE' })
 vim.api.nvim_set_hl(0, 'CursorLineNR', { bg='NONE', fg='#fabd2f' })
+
+-- Folds
 vim.api.nvim_set_hl(0, 'Folded', { bg='NONE', fg='#fabd2f' })
 
