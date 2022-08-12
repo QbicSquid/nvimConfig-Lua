@@ -1,5 +1,8 @@
 local cmp = require'cmp'
 
+-- luasnip setup
+local luasnip = require 'luasnip'
+
 cmp.setup({
     snippet = {
         -- REQUIRED - you must specify a snippet engine

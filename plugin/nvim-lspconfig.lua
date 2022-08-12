@@ -39,7 +39,14 @@ local lsp_flags = {
     -- This is the default in Nvim 0.7+
     debounce_text_changes = 150,
 }
-require('lspconfig')['pyright'].setup{
-    on_attach = on_attach,
-    flags = lsp_flags,
+
+lsp_list = {
+    'pyright',
 }
+
+for _,lsp in pairs(lsp_list) do
+    require('lspconfig')[lsp].setup{
+        on_attach = on_attach,
+        flags = lsp_flags,
+    }
+end
