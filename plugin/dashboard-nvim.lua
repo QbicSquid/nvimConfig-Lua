@@ -11,8 +11,8 @@ db.default_banner = {
 }
 
 db.header_pad = 5
-db.center_pad = 1
-db.footer_pad = 1
+db.center_pad = 3
+db.footer_pad = 3
 
 db.custom_footer = {
     '⣇⣿⠘⣿⣿⣿⡿⡿⣟⣟⢟⢟⢝⠵⡝⣿⡿⢂⣼⣿⣷⣌⠩⡫⡻⣝⠹⢿⣿⣷',
@@ -34,7 +34,7 @@ db.custom_footer = {
 
 db.custom_center = {
     {icon = '  ',
-    desc = 'Recently latest session                  ',
+    desc = 'Resore latest session                   ',
     shortcut = 'SPC s l',
     action ='SessionLoad'},
     {icon = '  ',
@@ -45,16 +45,8 @@ db.custom_center = {
     desc = 'Find  File                              ',
     action = 'Telescope find_files find_command=rg,--hidden,--files',
     shortcut = 'SPC f f'},
-    {icon = '  ',
-    desc ='File Browser                            ',
-    action =  'Telescope file_browser',
-    shortcut = 'SPC f b'},
     {icon = '  ',
     desc = 'Find  word                              ',
     action = 'Telescope live_grep',
     shortcut = 'SPC f w'},
-    {icon = '  ',
-    desc = 'Open Personal dotfiles                  ',
-    action = 'Telescope dotfiles path=' .. home ..'/.dotfiles',
-    shortcut = 'SPC f d'},
 }

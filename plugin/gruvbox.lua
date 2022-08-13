@@ -15,6 +15,9 @@ vim.o.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', { bg='NONE' })
 vim.api.nvim_set_hl(0, 'CursorLineNR', { bg='NONE', fg='#fabd2f' })
 
+-- Visual
+vim.api.nvim_set_hl(0, 'Visual', { bg='#665c54', fg='NONE' })
+
 -- Folds
 vim.api.nvim_set_hl(0, 'Folded', { bg='NONE', fg='#fabd2f' })
 

@@ -4,6 +4,7 @@ require('nvim-tree').setup{
             enable = false,
             open_win_config = {
                 col = 0,
+                row = 0,
                 relative = 'editor',
             },
         },
@@ -23,5 +24,6 @@ require('nvim-tree').setup{
     }
 }
 
--- Hotkeys
-vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', { noremap = true })
+-- Keymaps
+local opts = { noremap=true, silent=true }
+vim.api.nvim_set_keymap('n', '<C-n>', ':NvimTreeToggle<CR>', opts)

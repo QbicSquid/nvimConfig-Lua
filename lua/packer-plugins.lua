@@ -24,4 +24,8 @@ return require('packer').startup(function()
         run = ':TSUpdate'
     }
     use 'glepnir/dashboard-nvim' -- Display when starting neovim
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0', -- A finder of finders
+        requires = { 'nvim-lua/plenary.nvim', } -- Truly a thing of wonders
+    }
 end)
