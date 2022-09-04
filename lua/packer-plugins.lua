@@ -6,6 +6,7 @@ return require('packer').startup(function()
 
     -- LSP & Related Features
     use 'neovim/nvim-lspconfig' -- config for LSP
+    use 'williamboman/mason.nvim' -- automatic lsp installation
     use 'L3MON4D3/LuaSnip' -- Snippet plugin
     use {
         'hrsh7th/nvim-cmp', -- Autocompletion plugin

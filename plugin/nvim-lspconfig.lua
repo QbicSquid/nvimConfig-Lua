@@ -56,9 +56,12 @@ local lsp_flags = {
     debounce_text_changes = 150,
 }
 
-lsp_list = {
-    'pyright',
-}
+-- The needed lsp's must be installed using Mason
+-- Then the lsps need to be in a table in the file lsp-list.lua in lua folder
+local status, ret = pcall (require, 'lsp-list')
+if (not status) then
+    lsp_list = {}
+end
 
 for _,lsp in pairs(lsp_list) do
     require('lspconfig')[lsp].setup{
