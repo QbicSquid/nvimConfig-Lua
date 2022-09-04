@@ -1,11 +1,17 @@
 require('nvim-tree').setup{
+    hijack_cursor = true,
+    auto_reload_on_write = true,
+    reload_on_bufenter = true,
     view = {
+        centralize_selection = true,
         float = {
-            enable = false,
+            enable = true,
             open_win_config = {
                 col = 0,
                 row = 0,
                 relative = 'editor',
+                border = 'rounded',
+                style = 'minimal',
             },
         },
     },
@@ -21,6 +27,19 @@ require('nvim-tree').setup{
                 git = true,
             }
         }
+    },
+    diagnostics = {
+        enable = true,
+        debounce_delay = 150,
+        show_on_dirs = true,
+    },
+    git = {
+        enable = true,
+        show_on_dirs = true,
+    },
+    filesystem_watchers = {
+        enable = true,
+        debounce_delay = 150,
     }
 }
 
